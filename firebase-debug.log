@@ -1,0 +1,47 @@
+[debug] [2021-06-03T11:23:00.300Z] ----------------------------------------------------------------------
+[debug] [2021-06-03T11:23:00.302Z] Command:       E:\NodeJs\node.exe C:\Users\Tiwari\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-06-03T11:23:00.303Z] CLI Version:   9.12.1
+[debug] [2021-06-03T11:23:00.303Z] Platform:      win32
+[debug] [2021-06-03T11:23:00.303Z] Node Version:  v12.18.0
+[debug] [2021-06-03T11:23:00.304Z] Time:          Thu Jun 03 2021 16:53:00 GMT+0530 (India Standard Time)
+[debug] [2021-06-03T11:23:00.304Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-03T11:23:00.312Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-03T11:23:00.312Z] > authorizing via signed-in user (pratyushtiwarimj@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\WebDev\portpolio_web\build\web
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using unhired-coder. 
+[debug] [2021-06-03T11:23:08.963Z] > refreshing access token with scopes: []
+[debug] [2021-06-03T11:23:08.965Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-03T11:23:09.453Z] <<< HTTP RESPONSE 200 {"date":"Thu, 03 Jun 2021 11:23:09 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-03T11:23:09.537Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/unhired-coder [none]
+[debug] [2021-06-03T11:23:10.225Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/unhired-coder 200
+[debug] [2021-06-03T11:23:10.226Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/unhired-coder {"projectId":"unhired-coder","projectNumber":"782154844951","displayName":"UnHired-Coder","name":"projects/unhired-coder","resources":{"hostingSite":"unhired-coder"},"state":"ACTIVE"}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
