@@ -1,50 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <!--
-      If you are serving your web app in a path other than the root, change the
-      href value below to reflect the base path you are serving from.
-
-      The path provided below has to start and end with a slash "/" in order for
-      it to work correctly.
-
-      Fore more details:
-      * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-    -->
-    <base href="/">
-
     <meta charset="UTF-8">
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta name="description" content="A new Flutter project.">
-
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="portpolio_web">
-    <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UnHired-Coder</title>
-    <link rel="manifest" href="manifest.json">
-    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-    <script type="text/javascript">
-    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" type="png" href="/assets/images/avatar2.png">
 </head>
-<body>
 
-<!-- This script installs service_worker.js to provide PWA functionality to
-     application. For more information, see:
-     https://developers.google.com/web/fundamentals/primers/service-workers -->
-<script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=3180743337');
-      });
-    }
-</script>
-</script>
-<script src="main.dart.js" type="application/javascript"></script>
+<body>
+    <nav class="top-navbar navbar fixed-top navbar-expand navbar-light bg-white">
+        <div class="container justify-content-center">
+            <div style="height: 80px;"></div>
+            <a style="text-decoration: none; color: black;" href="#">
+                <h2>UnHired-Coder</h2>
+            </a>
+            <div class="navbar-btns navbar-nav ">
+                <a class="nav-link " href="./index.html" title="sign in">Blogs</a>
+                <div class="navbar-text"> </div>
+                <a class="nav-link " href="./about.html" title="sign up">About</a>
+                <div class="navbar-text "> </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="bottom-navbar navbar fixed-bottom navbar-expand navbar-light bg-white">
+        <div class="container justify-content-center">
+        </div>
+    </nav>
+    <div style="height: 150px"></div>
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="float-left text-center">
+                <h4>Blogs</h4>
+            </div>
+            <div class="col-7 ml-1">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <article>
+            <section class="mt-5">
+                <div class="row justify-content-center">
+                    <div class="float-left">
+                        <div class="card">
+                            <div class="card-body">
+                                <span><img class="rounded-circle float-left mx-2 my-4" height="70"
+                                        src="assets/images/avatar_self.jpg" alt="Addy Osmani">
+                                    <h5 class="card-title">Pratyush Tiwari</h5>
+                                </span>
+
+                                <h6 class="font-weight-bold">My journey to GSoC @Pitivi | Facts.</h6>
+                                <small class="text-secondary">June , 2021 &#8226; 6 min read</small>
+                                <p style="font-size: smaller;">
+                                    Finally, I am writing a blog. It's the first time I am writing it so please bear
+                                    with me if I go a little off-trend.....
+                                </p>
+                                <a href="./gsoc.html" class="btn btn btn-outline-primary float-right">Read</a>
+                            </div>
+                        </div>
+                        <div class="col-7 ml-1">
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                 <br><br><br>
+                 <div class="row justify-content-center">
+                    <div class="float-left">
+                        <div class="card">
+                            <div class="card-body">
+                                <span><img class="rounded-circle float-left mx-2 my-4" height="70"
+                                        src="assets/images/avatar_self.jpg" alt="Addy Osmani">
+                                    <h5 class="card-title">Pratyush Tiwari</h5>
+                                </span>
+
+                                <h6 class="font-weight-bold">GSoC project @Pitivi~Cut Mode.</h6>
+                                <small class="text-secondary">June , 2021 &#8226; 8 min read</small>
+                                <p style="font-size: smaller;">
+                                    I got selected as a Student developer GSoC'21 with Pitivi, a beautiful
+                                    Media Editor, and Renderer. I started....</p> 
+                                <a href="./project.html" class="btn btn btn-outline-primary float-right">Read</a>
+                            </div>
+                        </div>
+                        <div class="col-7 ml-1">
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                 </div>   
+                 <br><br><br>
+            </section>
+        </article>
+    </main>
+    <footer class="bg-light">
+        <div class="container">
+            <div class="row pt-5">
+
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
