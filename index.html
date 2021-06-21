@@ -9,15 +9,102 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="icon" type="png" href="/assets/images/avatar2.png">
+    <link rel="icon" type="png" href="/assets/images/favicon.png">
+
+    <style>
+        
+
+        .words {
+            color: #000000;
+            font-size: 0;
+            line-height: 1.5;
+        }
+
+        .words span {
+            font-size: 1rem;
+            display: inline-block;
+            animation: move 3s ease-in-out infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(-30%, 0);
+            }
+
+            50% {
+                text-shadow: 0 2px 50px rgba(0, 0, 0, 0.75);
+            }
+
+            100% {
+                transform: translate(30%, 0);
+            }
+        }
+
+        .words span:nth-child(2) {
+            animation-delay: 0.15;
+        }
+
+        .words span:nth-child(3) {
+            animation-delay: 0.25s;
+        }
+
+        .words span:nth-child(4) {
+            animation-delay: 0.35s;
+        }
+
+        .words span:nth-child(5) {
+            animation-delay: 0.45s;
+        }
+
+        .words span:nth-child(6) {
+            animation-delay: 0.60s;
+        }
+
+        .words span:nth-child(7) {
+            animation-delay: 0.75s;
+        }
+        
+        .words span:nth-child(8) {
+            animation-delay: 3.25s;
+        }
+        .words span:nth-child(9) {
+            animation-delay: 3.35s;
+        }
+        .words span:nth-child(10) {
+            animation-delay: 3.45s;
+        }
+        .words span:nth-child(11) {
+            animation-delay: 3.55s;
+        }
+        .words span:nth-child(12) {
+            animation-delay: 3.65s;
+        }
+        .words span:nth-child(13) {
+            animation-delay: 3.80s;
+        }
+    </style>
+
 </head>
 
 <body>
     <nav class="top-navbar navbar fixed-top navbar-expand navbar-light bg-white">
-        <div class="container">
-            <div style="height: 80px;"></div>
-            <a style="text-decoration: none; color: black;" href="#">
-                <h2>UnHired-Coder</h2>
+        <div class="container mx-3 my-4 back">
+            <a style=" float: left; text-decoration: none; color: black;" href="./index.html">
+                <div class="words word-1">
+                    <span><h5>U</h5></span>
+                    <span>n</span>
+                    <span>H</span>
+                    <span>i</span>
+                    <span>r</span>
+                    <span>e</span>
+                    <span>d</span>
+                    <span>-</span>
+                    <span><h5>C</h5></span>
+                    <span>o</span>
+                    <span>d</span>
+                    <span>e</span>
+                    <span>r</span>
+                </div>
             </a>
             <div class="navbar-btns navbar-nav ">
                 <a class="nav-link " href="./index.html" title="sign in">Blogs</a>
