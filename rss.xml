@@ -17,7 +17,6 @@
 <id>https://unhired-coder.github.io/project.html</id>
 
 <content type="html" xml:base="http://www.nishitpatel.tech/gsoc'21/2021/05/31/start-of-gsoc-jouney.html">
-<p>
   <div class="container">
         <article>
             <div class="row">
@@ -113,7 +112,6 @@
             </section>
         </article>
     </div>
-    </p>
 </content>
 <author>
 <name>Pratyush Tiwari</name>
