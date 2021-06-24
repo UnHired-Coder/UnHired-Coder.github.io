@@ -1,12 +1,108 @@
-<rss version="2.0">
-  <channel>
-    <title>thingoftheday.xyz</title>
-    <link>https://thingoftheday.xyz</link>
-    <description>thingoftheday is a lightweight microblogging site powered by Contentful and vanilla HTML, CSS and JavaScript.
-    </description>
-  </channel>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<entry>
+<title type="html">GSoC project @Pitivi~Cut Mode</title>
+<link href="https://unhired-coder.github.io/project.html" rel="alternate" type="text/html" title="GSoC project @Pitivi~Cut Mode"/>
+<content type="html">
+  <main class="container">
+        <article>
+            <div class="row">
+                <div class="col-lg-8 mx-auto" ;>
+                    <h1 class="font-weight-bold mt-4">GSoC project @Pitivi~Cut Mode.</h1>
+                </div>
+            </div>
+            <section class="mt-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <br>
+                        <p>
+                            The Idea for this project is to have two timelines to ease certain types
+                            of tasks and increase productivity. This will essentially bring in a
+                            non-zoomable Timeline which will serve to ease the task of trimming,
+                            cutting, rearranging clips on the timeline in sync with the other
+                            timeline.
+                        </p>
+                        <br>
+                        <img class="col-lg-12" style="max-height: 300px;" src="https://unhired-coder.github.io/assets/images/priview_cut_mode_simple.png" style=" " alt="">
+                    </div>
+                </div>
+                <br><br>
+                <br><br>
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="font-weight-bold">Benifits ?</h2>
+                        <br>
+                        <p>
+                            Mostly, when we have a movie of a longer duration, we want to use the Zoom feature to see
+                            the whole timeline and scroll in-out to perform edits and rearrange clips. It consumes a lot
+                            of time which may be used productively somewhere, so to reduce user actions we have a zoom
+                            fitted timeline with small height layers so that all the layers and tracks are always
+                            visible. Now you only think about Zoom when you want to perform some precise edits, others
+                            on the Zoom fitted timeline ;).
+                        </p>
+                        <br> <br>
+                        From now, we will call the ZoomFitter timeline a <b>Mini Timeline</b> and the other simply a
+                        <b>Timeline</b>.
+                        <br> <br>
+                        <h5>Longer duration timeline?</h5>
+                        <p>You can easily keep track having the reduced size elements on the Mini Timeline.
+                        </p>
+                        <br><br>
+                        <img class="col-lg-12" style="max-height: 300px;"  src="https://unhired-coder.github.io/assets/images/long_duration.gif" style=" " alt="">
+                        <br> <br> <br> <br>
+                        <h5>Many layers to work with?</h5>
+                        <p>
+                            Pitivi allows you to unlock all the views to a separate window, so If you have more layers,
+                            you may undock the views to separate screens and expand the Mini Timeline to make all the
+                            layers visible at the same time.</p>
+                        <br>
+                        <img class="col-lg-12" style="max-height: 300px;"  src="https://unhired-coder.github.io/assets/images/many_layers_to_work.png" style=" " alt="">
+                        <br> <br> <br> <br>
 
-  <item>
-    <title>This is my RSS feed!</title>
-  </item>
-</rss>	
+                        <h5>Let's dive deep!</h5>
+                        <br>
+                        <p>
+                            Consider a case where we want to edit a portion of a timeline, for
+                            precise edits we have to zoom in at the required position, do the edits,
+                            zoom out, move to the next position, and so on for subsequent edits.
+                            This eats up a lot of precious time. The new global timeline allows the
+                            user to see the zoomed view as well as keep track of position in the
+                            global timeline at the same time. Now you can move anywhere in the
+                            timeline with a single click, preserving the zoomed view.</p>
+                        <br>
+                        <img class="col-lg-12" style="max-height: 300px;" src="https://unhired-coder.github.io/assets/images/move_playhead.gif" style=" " alt="">
+                        <br> <br> <br> <br>
+                        <p>
+                            Mini Timeline also allows you to rearrange clips so, where you have a short clip of
+                            about a few seconds and you wish to relocate it, say from start to the end of the timeline,
+                            you would select a clip, zoom out the timeline and drag it to end, zoom in to come to the
+                            same state. Another way is to start dragging and use the over scroll mechanism and wait for
+                            your desired position. Neither of them is ideal. The new global timeline allows to quickly
+                            locate clips and drag them at any position since the entire duration is always in view.</p>
+                        <br>
+                        <img class="col-lg-12" style="max-height: 300px;"  src="https://unhired-coder.github.io/assets/images/move_clip.gif" style=" " alt="">
+                        <br><br><br>
+                        <p>
+                            That's it for now. I will be adding more things here as they come.
+                        </p>
+                        <br>                        <p>
+                            Half a month has passed, feeling great already.
+
+                            <br><br>
+                            Will update you soon, <br> Thanks!
+                        </p>
+                    </div>
+                </div>
+                <br><br>
+            </section>
+        </article>
+    </main>
+</content>
+<author>
+<name>Pratyush Tiwari</name>
+<email>pratyushtiwarimj@gmail.com</email>
+</author>
+<category term="pitivi"/>
+<summary type="html">Pitivi-Cut Mode</summary>
+</entry>
+</feed>
