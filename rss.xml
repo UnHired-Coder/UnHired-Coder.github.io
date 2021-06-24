@@ -1,9 +1,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
+
+<generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator>
+<link href="https://unhired-coder.github.io/rss.xml" rel="self" type="application/atom+xml"/>
+<link href="https://unhired-coder.github.io/" rel="alternate" type="text/html" hreflang="en-IN"/>
+<updated>2021-06-23T14:16:47+00:00</updated>
+<id>https://unhired-coder.github.io/rss.xml</id>
+<title type="html">UnHired-Coder's Blog</title>
+<subtitle>Pratyush Tiwari | Avid programmer, learning the art of problem-solving. Android Developer. Opensource Contributer. To build services which would ease the life, not make it less mobile.</subtitle>
+
 <entry>
 <title type="html">GSoC project @Pitivi~Cut Mode</title>
 <link href="https://unhired-coder.github.io/project.html" rel="alternate" type="text/html" title="GSoC project @Pitivi~Cut Mode"/>
-<content type="html">
-  <main class="container">
+
+<published>2021-06-23T14:16:47+00:00</published>
+<updated>2021-06-23T14:16:47+00:00</updated>
+<id>https://unhired-coder.github.io/project.html</id>
+
+<content type="html" xml:base="http://www.nishitpatel.tech/gsoc'21/2021/05/31/start-of-gsoc-jouney.html">
+<p>
+  <div class="container">
         <article>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
@@ -97,7 +112,8 @@
                 <br></br>
             </section>
         </article>
-    </main>
+    </div>
+    </p>
 </content>
 <author>
 <name>Pratyush Tiwari</name>
