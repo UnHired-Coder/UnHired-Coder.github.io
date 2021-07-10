@@ -44,7 +44,7 @@
                 <br></br>
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h2 class="font-weight-bold">Benifits ?</h2>
+                        <h2 class="font-weight-bold">Benefits?</h2>
                         <br></br>
                         <p>
                             Mostly, when we have a movie of a longer duration, we want to use the Zoom feature to see
@@ -62,7 +62,7 @@
                         <p>You can easily keep track having the reduced size elements on the Mini Timeline.
                         </p>
                         <br></br>
-                        <img class="col-lg-12" style="max-height: 300px;"  src="https://unhired-coder.github.io/assets/images/long_duration.gif" alt=""></img>
+                        <img class="col-lg-12" style="max-height: 300px;"  src="https://unhired-coder.github.io/assets/images/long_duration.gif" alt="#"></img>
                         <br> <br> </br> </br>
                         <h5>Many layers to work with?</h5>
                         <p>
@@ -70,7 +70,7 @@
                             you may undock the views to separate screens and expand the Mini Timeline to make all the
                             layers visible at the same time.</p>
                         <br></br>
-                        <img class="col-lg-12" style="max-height: 300px;"  src="https://unhired-coder.github.io/assets/images/many_layers_to_work.png" alt=""></img>
+                        <img class="col-lg-12" style="max-height: 300px;"  src="https://unhired-coder.github.io/assets/images/many_layers_to_work.png" alt="#"></img>
                         <br> <br> </br> </br>
 
                         <h5>Let's dive deep!</h5>
@@ -79,22 +79,22 @@
                             Consider a case where we want to edit a portion of a timeline, for
                             precise edits we have to zoom in at the required position, do the edits,
                             zoom out, move to the next position, and so on for subsequent edits.
-                            This eats up a lot of precious time. The new global timeline allows the
+                            This eats up a lot of precious time. The new Mini timeline allows the
                             user to see the zoomed view as well as keep track of position in the
-                            global timeline at the same time. Now you can move anywhere in the
+                            Mini timeline at the same time. Now you can move anywhere in the
                             timeline with a single click, preserving the zoomed view.</p>
                         <br></br>
-                        <img class="col-lg-12" style="max-height: 300px;" src="https://unhired-coder.github.io/assets/images/move_playhead.gif"  alt=""></img>
+                        <img class="col-lg-12" style="max-height: 300px;" src="https://unhired-coder.github.io/assets/images/move_playhead.gif"  alt="#"></img>
                         <br> <br> </br> </br>
                         <p>
                             Mini Timeline also allows you to rearrange clips so, where you have a short clip of
                             about a few seconds and you wish to relocate it, say from start to the end of the timeline,
                             you would select a clip, zoom out the timeline and drag it to end, zoom in to come to the
                             same state. Another way is to start dragging and use the over scroll mechanism and wait for
-                            your desired position. Neither of them is ideal. The new global timeline allows to quickly
+                            your desired position. Neither of them is ideal. The new Mini timeline allows to quickly
                             locate clips and drag them at any position since the entire duration is always in view.</p>
                         <br></br>
-                        <img class="col-lg-12" style="max-height: 300px;"  src="https://unhired-coder.github.io/assets/images/move_clip.gif"  alt=""></img>
+                        <img class="col-lg-12" style="max-height: 300px;"  src="https://unhired-coder.github.io/assets/images/move_clip.gif"  alt="#"></img>
                         <br></br>
                         <p>
                             That's it for now. I will be adding more things here as they come.
