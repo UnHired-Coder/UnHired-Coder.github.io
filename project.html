@@ -59,7 +59,7 @@
                     </small>
                 </div>
                 <div class="row">
-                    <small class="text-secondary">June , 2021 &#8226; 7 min read</small>
+                    <small class="text-secondary">June , 2021 &#8226; 10 min read</small>
                 </div>
             </div>
         </div>
@@ -240,15 +240,77 @@
                         <br>
                         <br>
                         <p>
-                            <!-- <pre style="padding: 10px; align-self: left;">
-                            <code>
-                                #include<stdio.h>
-                                int main() {
-                                    printf("Hello Geeks");
-                                }
-                            </code>
-                        </pre> -->
                         </p>
+                        <br>
+                        <h5><b> Code Snippets</b></h5>
+                        <br>
+                        <p>
+                            <b>1.</b> As the Mini Timeline does not change with zoom-level (unlike Timeline) and always
+                            remains
+                            <b>zoom-fitted</b>, the Mini versions of classes do not subclass <a
+                                href="https://gitlab.gnome.org/GNOME/pitivi/-/blob/144907e868793dd5d73bf8257f678ead82ec4aba/pitivi/utils/timeline.py#L363"
+                                target="_blank">
+                                <b>Zoomable</b></a>
+                            , instead,
+                            they use the
+                            best ratio to transform positions whenever changed. <br>
+                            Below is the method for the calculation of the best ratio to fit the Timeline into the view.
+                        </p>
+                        <br>
+                        <pre style="padding: 10px; align-self: left;">
+                            <code>
+def <a href="https://gitlab.gnome.org/GNOME/pitivi/-/blob/144907e868793dd5d73bf8257f678ead82ec4aba/pitivi/timeline/timeline.py#L1370" target="_blank">calc_best_zoom_ratio</a>(self, mini=True):
+    """Returns the zoom ratio so that the entire timeline is in (mini)view."""
+    duration = 0 if not self.ges_timeline else self.ges_timeline.get_duration()
+    if not duration or (mini and not self.mini_layout_container.get_visible()):
+        # Maximum available width, the parent is TimelineContainer
+        return self.get_parent().get_allocated_width()
+
+    # Add Gst.SECOND - 1 to the timeline duration to make sure the
+    # last second of the timeline will be in view.
+    timeline_duration = duration + Gst.SECOND - 1
+    timeline_duration_s = int(timeline_duration / Gst.SECOND)
+    self.debug("Adjusting zoom for a timeline duration of %s secs",
+            timeline_duration_s)
+
+    layout = self.mini_layout if mini else self.layout
+    zoom_ratio = layout.get_allocation().width / timeline_duration_s
+    return zoom_ratio
+                            </code>
+                        </pre>
+                        <br>
+                        <p>
+                            <b>2.</b> The Clips/Elements on the Mini Timeline are just simple representations without
+                            the thumbnails, we use color-filled rectangles (the color is decided based on the type of
+                            clip) to represent them.
+                        </p>
+                        <br>
+                        <pre style="padding: 10px; align-self: left;">
+                            <code>
+class <a href="https://gitlab.gnome.org/GNOME/pitivi/-/blob/144907e868793dd5d73bf8257f678ead82ec4aba/pitivi/timeline/previewers.py#L1451" target="_blank">MiniPreview</a> (Gtk.Layout):
+"""Mini Clip previewer to draw color filled mini clips."""
+
+def __init__(self, color):
+    Gtk.Layout.__init__(self)
+    self.get_style_context().add_class("MiniPreviewer")
+    self.color = color
+    self.props.height_request = MINI_LAYER_HEIGHT
+
+def do_draw(self, context):
+    rect = Gdk.cairo_get_clip_rectangle(context)[1]
+    context.set_source_rgb(*self.color)
+    context.rectangle(0, 0, rect.width, rect.height)
+    context.fill()
+                            </code>
+                        </pre>
+                        <br>
+                        <br>
+                        <br><br>
+                        <p>
+                            Implementing the <b>Mini Timeline</b> became easy with the feedback from mentors and the
+                            clean and extensible codebase.
+                        </p>
+                        <br>
                         <p>
                             That's it for now. I will be adding more things here as they come.
                         </p>
