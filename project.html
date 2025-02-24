@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UnHired-Coder - GSoC Final Report @Pitivi~Cut Mode</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+  <link rel="icon" type="png" href="/assets/images/avatar2.png">
+  <style>
+    :root {
+      --primary: #007bff;
+      --secondary: #6c757d;
+      --bg-color: #f4f7f9;
+      --text-color: #333;
+    }
+    body {
+      background: var(--bg-color);
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    /* Navbar */
+    .top-navbar {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: var(--text-color) !important;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      color: var(--primary) !important;
+    }
+    /* Post Header */
+    .post-header {
+      margin-top: 150px;
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .post-header .author {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .post-header .author img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    .post-header .author-info {
+      text-align: left;
+    }
+    .post-header .author-info h6 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .post-header .author-info small {
+      color: var(--secondary);
+      font-size: 0.9rem;
+    }
+    .post-header h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    /* Post Content */
+    .post-content {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+    }
+    .post-content h2 {
+      font-size: 1.75rem;
+      margin-top: 40px;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+      font-weight: 600;
+    }
+    .post-content h5 {
+      font-size: 1.25rem;
+      margin-top: 30px;
+      font-weight: 600;
+    }
+    .post-content p {
+      font-size: 1rem;
+      margin: 20px 0;
+      line-height: 1.8;
+    }
+    /* Updated Image Style: Scale to fit width without cropping */
+    .post-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .post-content iframe {
+      width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    /* Highlighted Sections */
+    .highlight-box {
+      border: 2px dotted #ccc;
+      padding: 15px;
+      margin: 40px 0;
+      border-radius: 8px;
+    }
+    /* Code Snippets */
+    pre {
+      background: #f8f9fa;
+      border-left: 4px solid var(--primary);
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 4px;
+    }
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.95rem;
+      color: #d63384;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .post-header h1 {
+        font-size: 2rem;
+      }
+      .post-content {
+        margin: 20px;
+        padding: 20px;
+      }
+      .post-header .author {
+        flex-direction: column;
+      }
+      .post-header .author img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-navbar navbar fixed-top navbar-expand navbar-light bg-white">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <a href="./index.html" class="navbar-brand">UnHired-Coder</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="./index.html">Blogs</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Post Header -->
+  <header class="post-header">
+    <div class="author">
+      <img src="assets/images/avatar_self.jpg" alt="Pratyush Tiwari">
+      <div class="author-info">
+        <h6>Pratyush Tiwari</h6>
+        <small>Aug, 2021 &#8226; 10 min read</small>
+      </div>
+    </div>
+    <h1>Google Summer of Code Final Report @Pitivi~Cut Mode.</h1>
+  </header>
+  
+  <!-- Post Content -->
+  <main class="post-content">
+    <div class="text-center">
+      <img src="assets/images/gsoc_pitivi.png" alt="GSoC Pitivi">
+    </div>
+    <p>Let's quickly go over the project :)</p>
+    
+    <section>
+      <h2>Pitivi ~Cut Mode</h2>
+      <p>
+        The idea for this project is to have two timelines to ease certain tasks and increase productivity. This introduces a non-zoomable Timeline which simplifies trimming, cutting, and rearranging clips in sync.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/priview_cut_mode_simple.png" alt="Preview Cut Mode">
+      </div>
+    </section>
+    
+    <section class="highlight-box">
+      <p>
+        You can also watch the <strong>GUADEC Intern Lightening Talks 2021</strong> where I discuss the "Cut-Mode" project with fellow contributors and community members.
+      </p>
+      <iframe height="300" src="https://www.youtube.com/embed/DjmL5YbcPEQ?start=8284" title="GUADEC Intern Lightening Talks 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    
+    <section>
+      <h2>Benefits?</h2>
+      <p>
+        For longer movies, using a zoom feature to see the entire timeline and scroll for editing consumes a lot of time. The solution is a zoom-fitted timeline with slim layers ensuring all tracks remain visible. We'll call the zoom-fitted timeline the <strong>Mini Timeline</strong> and the other simply the <strong>Timeline</strong>.
+      </p>
+      <h5>Longer Duration Timeline?</h5>
+      <p>
+        With scaled, reduced-size elements on the Mini Timeline, you can easily track changes as the timeline grows.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/long_duration.gif" alt="Long Duration Timeline">
+      </div>
+      <p>
+        As elements are added or removed, the Mini Timeline scales accordingly, keeping the entire timeline in view.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/scale_as_timeline_grows.gif" alt="Timeline Scales">
+      </div>
+      <h5>Many Layers to Work With?</h5>
+      <p>
+        Pitivi allows you to undock views to separate screens, expanding the Mini Timeline so that all layers are visible simultaneously.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/many_layers_to_work.png" alt="Multiple Layers">
+      </div>
+      <h5>Let's Dive Deep!</h5>
+      <p>
+        Consider the scenario where precise edits require zooming in at a specific position, making changes, then zooming out to continue. This process wastes valuable time. The new Mini Timeline lets you maintain a zoomed view while tracking your position—with <strong>Playhead Locked</strong> mode (enabled via <strong>Alt+P</strong>). The timeline scrolls horizontally to center the playhead.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/move_playhead.gif" alt="Move Playhead">
+      </div>
+      <p>
+        The Mini Timeline also makes rearranging clips easier. Instead of multiple steps to relocate a clip, simply drag it on the Mini Timeline, which always displays the entire duration.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/move_around_clips_easily.gif" alt="Rearrange Clips">
+      </div>
+      <h5>What Else?</h5>
+      <p>
+        You can perform all actions on the Mini Timeline that you would on the conventional Timeline, such as dragging clips, applying transitions, and dropping effects.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/drag_on_the_mini_timeline.gif" alt="Drag on Mini Timeline">
+      </div>
+      <p>
+        Apply transitions and drop effects seamlessly.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/do_stuff_on_mini_timeline.gif" alt="Apply Transitions">
+      </div>
+      <p>
+        Finally, when you're done, hide the Mini Timeline by pressing <strong>Alt+C</strong>.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/easy_bro.jpg" alt="Easy Bro" style="width:30%;">
+      </div>
+      <div class="text-center">
+        <img src="./assets/images/done_close_timeline.gif" alt="Close Timeline">
+      </div>
+    </section>
+    
+    <section>
+      <h2><strong>Implementation</strong></h2>
+      <p>
+        Here's a high-level overview of the project's structure. The <strong>Layer</strong> class has been refactored into two implementations—<strong>Full Layer</strong> and <strong>Mini Layer</strong>—while the <strong>Clip</strong> class has been similarly subclassed.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/layer_subclass.png" alt="Layer Subclass">
+      </div>
+      <p>
+        Related classes have also been updated. The Timeline architecture now reflects these changes:
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/highlevel_overview_cutmode.png" alt="Timeline Overview" style="width:100%;">
+      </div>
+      <h5><strong>Code Snippets</strong></h5>
+      <p>
+        <strong>1.</strong> The Mini Timeline remains zoom-fitted regardless of the zoom level. The Mini versions of classes do not subclass <a href="https://gitlab.gnome.org/GNOME/pitivi/-/blob/144907e868793dd5d73bf8257f678ead82ec4aba/pitivi/utils/timeline.py#L363" target="_blank">Zoomable</a>; instead, they compute the optimal ratio to fit the timeline into view. Below is the method for calculating this ratio:
+      </p>
+      <pre><code>
+def calc_best_zoom_ratio(self, mini=True):
+    """Returns the zoom ratio so that the entire timeline is in (mini)view."""
+    duration = 0 if not self.ges_timeline else self.ges_timeline.get_duration()
+    if not duration or (mini and not self.mini_layout_container.get_visible()):
+        return self.get_parent().get_allocated_width()
+    timeline_duration = duration + Gst.SECOND - 1
+    timeline_duration_s = int(timeline_duration / Gst.SECOND)
+    self.debug("Adjusting zoom for a timeline duration of %s secs", timeline_duration_s)
+    layout = self.mini_layout if mini else self.layout
+    zoom_ratio = layout.get_allocation().width / timeline_duration_s
+    return zoom_ratio
+      </code></pre>
+      <p>
+        <strong>2.</strong> The Mini Timeline's clip representations are simplified – color-filled rectangles (with colors based on clip type) represent clips.
+      </p>
+      <pre><code>
+class MiniPreview(Gtk.Layout):
+    """Mini Clip previewer to draw color-filled mini clips."""
+    def __init__(self, color):
+        Gtk.Layout.__init__(self)
+        self.get_style_context().add_class("MiniPreviewer")
+        self.color = color
+        self.props.height_request = MINI_LAYER_HEIGHT
+
+    def do_draw(self, context):
+        rect = Gdk.cairo_get_clip_rectangle(context)[1]
+        context.set_source_rgb(*self.color)
+        context.rectangle(0, 0, rect.width, rect.height)
+        context.fill()
+      </code></pre>
+      <p>
+        All code changes are available on <a href="https://gitlab.gnome.org/GNOME/pitivi/-/merge_requests/397" target="_blank" style="color: red;"><strong>MR !397</strong></a>.
+      </p>
+      <p>
+        Implementing the Mini Timeline was made easier thanks to valuable mentor feedback and a clean, extensible codebase.
+      </p>
+      <p>
+        That's it for now. I will update this post with more details as they come.
+      </p>
+      <p>
+        Have a great day! Will update you soon. Thanks!
+      </p>
+    </section>
+  </main>
+</body>
+</html>

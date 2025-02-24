@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Blog Cards</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+  <link rel="icon" type="png" href="/assets/images/favicon.png">
+  <style>
+    /* Global Styles */
+    body {
+      background: #f4f7f9;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    main.container {
+      margin-top: 120px;
+      margin-bottom: 50px;
+    }
+    h4.section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    /* Modern Card */
+    .modern-card {
+      background: #fff;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .modern-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .modern-card .card-body {
+      padding: 20px;
+    }
+    /* Card Header: Author Info */
+    .author-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .author-info img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+      border: 2px solid #007bff;
+    }
+    .author-details h5 {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    .author-details small {
+      color: #888;
+      font-size: 0.85rem;
+    }
+    /* Post Content */
+    .post-content h6 {
+      margin: 10px 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #222;
+    }
+    .post-content p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    /* Read More Button */
+    .btn-read {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      border: 2px solid #007bff;
+      border-radius: 30px;
+      color: #007bff;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .btn-read:hover {
+      background: #007bff;
+      color: #fff;
+    }
+    /* Thumbnail Image Styling */
+    .card-thumbnail img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .author-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .author-info img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-expand navbar-light bg-white shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <a href="./index.html" class="navbar-brand">UnHired-Coder</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="./index.html">Blog</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h4 class="section-title">Blog Posts</h4>
+
+    <!-- Modern Card Example with Thumbnail -->
+    <div class="modern-card card">
+      <div class="card-body">
+        <div class="row">
+          <!-- Text Content -->
+          <div class="col-md-8">
+            <div class="author-info">
+              <img src="assets/images/avatar_self.jpg" alt="Pratyush Tiwari" />
+              <div class="author-details">
+                <h5>Pratyush Tiwari</h5>
+                <small>June, 2021 &#8226; 8 min read</small>
+              </div>
+            </div>
+            <div class="post-content">
+              <h6>Custom Markers on Google Maps Street View -Android.</h6>
+              <p>
+                Integrating Google Maps Street View with Custom Markers can transform how users interact with location-based apps...
+              </p>
+              <a href="https://medium.com/@pratyushtiwarimj/custom-markers-on-google-maps-street-view-android-c9a94177d89a" class="btn-read">Read More</a>
+            </div>
+          </div>
+          <!-- Thumbnail -->
+          <div class="col-md-4 card-thumbnail">
+            <img src="./assets/images/street_view.png" alt="Thumbnail for Custom Markers" />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modern Card Example with Thumbnail -->
+    <div class="modern-card card">
+      <div class="card-body">
+        <div class="row">
+          <!-- Text Content -->
+          <div class="col-md-8">
+            <div class="author-info">
+              <img src="assets/images/avatar_self.jpg" alt="Pratyush Tiwari" />
+              <div class="author-details">
+                <h5>Pratyush Tiwari</h5>
+                <small>June, 2021 &#8226; 6 min read</small>
+              </div>
+            </div>
+            <div class="post-content">
+              <h6>My journey to GSoC @Pitivi | Facts.</h6>
+              <p>
+                Finally, I am writing a blog. It's the first time I am writing it so please bear with me if I go a little off-trend...
+              </p>
+              <a href="./gsoc.html" class="btn-read">Read More</a>
+            </div>
+          </div>
+          <!-- Thumbnail -->
+          <div class="col-md-4 card-thumbnail">
+            <img src="assets/images/gsoc_pitivi.png" alt="Thumbnail for GSoC Journey" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Modern Card Example with Thumbnail -->
+    <div class="modern-card card">
+      <div class="card-body">
+        <div class="row">
+          <!-- Text Content -->
+          <div class="col-md-8">
+            <div class="author-info">
+              <img src="assets/images/avatar_self.jpg" alt="Pratyush Tiwari" />
+              <div class="author-details">
+                <h5>Pratyush Tiwari</h5>
+                <small>June, 2021 &#8226; 8 min read</small>
+              </div>
+            </div>
+            <div class="post-content">
+              <h6>Google Summer of Code Final Report @Pitivi~Cut Mode.</h6>
+              <p>
+                I got selected as a Student developer GSoC'21 with Pitivi, a beautiful and powerful media editor. I started...
+              </p>
+              <a href="./project.html" class="btn-read">Read More</a>
+            </div>
+          </div>
+          <!-- Thumbnail -->
+          <div class="col-md-4 card-thumbnail">
+            <img src="./assets/images/priview_cut_mode_simple.png" alt="Thumbnail for GSoC Report" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

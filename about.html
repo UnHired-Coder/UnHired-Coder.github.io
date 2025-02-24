@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UnHired-Coder - Connect with Me</title>
+  
+  <!-- Bootstrap & FontAwesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="icon" type="png" href="/assets/images/avatar2.png">
+
+  <style>
+    /* Global Styling */
+    body {
+      background: #f4f7f9;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* Navbar */
+    .top-navbar {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #333 !important;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #007bff !important;
+    }
+
+    /* Social Media Section */
+    .social-section {
+      max-width: 600px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .social-section h4 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .social-section img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      color: #fff;
+      border-radius: 50%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .social-icons a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Social Media Colors */
+    .fa-linkedin { background: #0077b5; }
+    .fa-github { background: #333; }
+    .fa-gitlab { background: #fc6d26; }
+    .fa-twitter { background: #1da1f2; }
+    .fa-instagram { background: #e4405f; }
+    .fa-rss { background: #ff6600; }
+
+    /* Center main content vertically & horizontally */
+    main.container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 80px); /* Adjust based on your navbar height */
+      margin-top: 80px; /* Ensure content is pushed below the fixed navbar */
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .social-icons a {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="top-navbar navbar fixed-top navbar-expand navbar-light bg-white">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <a href="./index.html" class="navbar-brand">UnHired-Coder</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="./index.html">Blogs</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Social Section -->
+  <main class="container">
+    <div class="social-section">
+      <h4>Connect with Me</h4>
+      <img class="img-fluid" src="assets/images/see_below.jpg" alt="See Below">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/pratyush-tiwari-9aa143174/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://github.com/UnHired-Coder" target="_blank" class="fa fa-github"></a>
+        <a href="https://gitlab.gnome.org/UnHired-Coder" target="_blank" class="fa fa-gitlab"></a>
+        <a href="https://twitter.com/pratyushhhhhh" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/_pratyush_tiwari_/" target="_blank" class="fa fa-instagram"></a>
+        <a href="./rss.xml" class="fa fa-rss"></a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
