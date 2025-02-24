@@ -1,269 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UnHired-Coder</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="icon" type="png" href="/assets/images/avatar2.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UnHired-Coder - Blog Post</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+  <link rel="icon" type="png" href="/assets/images/avatar2.png">
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #6c757d;
+      --background-color: #f4f7f9;
+      --text-color: #333;
+      --link-color: #007bff;
+    }
+    
+    body {
+      background: var(--background-color);
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Navbar */
+    .top-navbar {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .navbar a {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: var(--primary-color);
+    }
+    
+    /* Post Header */
+    .post-header {
+      margin-top: 120px;
+      text-align: center;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+    .post-header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid var(--primary-color);
+    }
+    .post-header .author-info {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: var(--secondary-color);
+    }
+    .post-header h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    
+    /* Post Content */
+    .post-content {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 30px;
+    }
+    .post-content h2 {
+      font-size: 1.75rem;
+      margin-top: 40px;
+      font-weight: 600;
+      border-left: 4px solid var(--primary-color);
+      padding-left: 10px;
+    }
+    .post-content p {
+      margin: 20px 0;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .post-content img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    
+    /* Links */
+    .post-content a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .post-content a:hover {
+      color: var(--primary-color);
+    }
+    
+    /* Post Footer */
+    .post-footer {
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .post-header h1 {
+        font-size: 2rem;
+      }
+      .post-content {
+        margin: 20px auto;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <nav class="top-navbar navbar fixed-top navbar-expand navbar-light bg-white">
-        <div class="container mx-3 my-4">
-            <a style=" float: left; text-decoration: none; color: black;" href="./index.html">
-                <div class="words word-1">
-                    <span>U</span>
-                    <span>n</span>
-                    <span>H</span>
-                    <span>i</span>
-                    <span>r</span>
-                    <span>e</span>
-                    <span>d</span>
-                    <span>-</span>
-                    <span>C</span>
-                    <span>o</span>
-                    <span>d</span>
-                    <span>e</span>
-                    <span>r</span>
-                </div>
-            </a>
-            <div class="navbar-btns navbar-nav ">
-                <a class="nav-link " href="./index.html" title="sign in">Blogs</a>
-                <div class="navbar-text"> </div>
-                <a class="nav-link " href="./about.html" title="sign up">About</a>
-                <div class="navbar-text "> </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- <nav class="bottom-navbar navbar fixed-bottom navbar-expand navbar-light bg-white">
-        <div class="container justify-content-center">
-            <img class="rounded-circle float-left" height="40" src="assets/images/avatar1.png" alt="#">
-            <div class="col-lg-6 col-md-8">
-                <div class="">Never miss a story from <b>Addy Osmani</b><span class="d-none d-md-inline">, when you sign up for Medium. <a class="text-success" href="#">Learn more</a></span></div>
-            </div>
-            <button type="button" class="get-updates btn btn-success btn-sm float-right py-2 px-3 font-weight-bold text-uppercase">Get updates</button>
-
-        </div>
-    </nav> -->
-    <div style="height: 150px"></div>
-    <main class="container">
-        <div class="row justify-content-center">
-            <div class="float-left text-center">
-                <img class="rounded-circle" height="70" src="assets/images/avatar_self.jpg" alt="#">
-            </div>
-            <div class="col-7 ml-1">
-                <div class="row">
-                    <h6>Pratyush Tiwari</h6>
-                    <!-- <button class="follow-btn follow-btn--small btn btn-outline-success btn-sm ml-3" type="button">Follow</button> -->
-                </div>
-                <div class="row">
-                    <small class="text-secondary">Avid programmer, learning the art of problem-solving. Android
-                        Developer. Opensource Contributer. To build services which would ease the life, not make it less
-                        mobile.
-                    </small>
-                </div>
-                <div class="row">
-                    <small class="text-secondary">June 2021 &#8226; 6 min read</small>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <article>
-            <div class="row">
-                <div class="col-lg-8 mx-auto" ;>
-                    <h1 class="font-weight-bold mt-4">My journey to GSoC @Pitivi | Facts.</h1>
-                    <div class="row justify-content-center">
-                        <img class="img-fluid my-4" style="max-height: 200px;" src="assets/images/gsoc_pitivi.png">
-                        <p>
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <section class="mt-5">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <p>Finally, I am writing a blog. It's the first time I am writing it so please bear with me if I
-                            go a little off-trend.
-                        </p>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="font-weight-bold">What is GSoC?</h2>
-                        <br>
-                        <p>
-                            I assume you probably are aware of Google Summer of Code (GSoC). In simple terms, it's an
-                            opportunity for you to gain real-world project
-                            experience where your even a bit of contribution will impact millions of users. You feel
-                            proud of it :).
-                            <br> You get to connect with an awesome community of developers, always a space to learn
-                            from other's experiences.
-                            <br><br> And finally, Google helps to connect and bring together student developers who
-                            would like to work with the respective organization.
-                            You get a decent stipend as well! from google and other perks.
-                        </p>
-                    </div>
-                </div>
-                <br><br>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="font-weight-bold">How to start?</h2>
-                        <br>
-                        <div class="row justify-content-center">
-                            <img class="img-fluid my-4" style="max-height: 200px;" src="assets/images/how_to_start.jpg">
-                        </div>
-
-                        <p>
-                            Just Start ASAP!, pick an organization! (depends on your interest, if you don't have any,
-                            look for some technology you use or have seen people using. It's a personal suggestion as I
-                            feel you develop interest if you know even a bit about the Idea/Goal behind an
-                            organization).
-                            <br>
-                            <br>
-                            After you have decided, your first hurdle/goal is to get the Development environment up and
-                            running, a.k.a, build the project from the source. It means you will have to use the
-                            codebase ( Code) and get the software/service running locally on your system.
-                            You can visit the contribution documentation of the organization to help you with that.
-                            <br>
-                            <br>
-                            See, not all projects are ~hard, nor all projects are ~easy but, the catch is, you can't
-                            overlook and judge this is easy or hard. You will have to come on the same level of
-                            understanding to implement a new feature.
-                            Again you don't need to grasp the whole codebase, but you should know how the things are
-                            plugged in and working.
-                            <br>
-                            <br>
-                            So start exploring part by part, and the great way of doing it is to look for the issues
-                            marked with the label ~beginer wherever the project is hosted (GitHub, GitLab, etc.). This
-                            small-large contribution will also help you to show your work wherever you want.
-                            <br>
-                            <br>
-                        </p>
-                        ~The good thing about working on a huge codebase is, you find most code/syntax within the
-                        codebase. The rest you can ~Google and look for documentation :).
-                        <br>
-                        <div class="row justify-content-center">
-                            <img class="img-fluid my-4" style="max-height: 200px;" src="assets/images/easy_bro.jpg">
-                        </div>
-                        <p>
-                            Just try to learn at every step. With honest efforts, you will very soon be very comfortable
-                            with the codebase and Vola!!!.
-                        </p>
-                    </div>
-                </div>
-                <br><br>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="font-weight-bold">My journey?</h2>
-                        <br>
-                        <br>
-                        <div class="row justify-content-center">
-                            <img class="img-fluid my-4" style="max-height: 200px;" src="assets/images/my_journey.gif">
-                        </div>
-                        <br>
-                        <br>
-                        <p>
-                            I got selected as a Student developer GSoC'21 with <a href="https://www.pitivi.org/"
-                                style="text-decoration: none;font-weight: bold;" target="_blank"><b>Pitivi</b></a>, a
-                            beautiful
-                            and powerful movie editor continuously evolving with new features added. Pitivi
-                            uses <a href="https://gstreamer.freedesktop.org/documentation/tutorials/index.html"
-                                style="text-decoration: none;font-weight: bold;" target="_blank">GStreamer</a> which is
-                            a project under <a href="https://www.gnome.org/"
-                                style="text-decoration: none;font-weight: bold;" target="_blank">GNOME</a> Community.
-                            <br>
-                            <br>
-                            <br>
-                            <ul>
-                                <li class="mt-3">Pitivi Ripo: <a href="https://gitlab.gnome.org/GNOME/pitivi"
-                                        style="text-decoration: none; font-weight: bold;"
-                                        target="_blank">GitLab.gnome.org</a> </li>
-                                <li class="mt-3">My Profile: <a href="https://gitlab.gnome.org/UnHired-Coder"
-                                        style="text-decoration: none; font-weight: bold;"
-                                        target="_blank">UnHired-Coder</a> </li>
-                                <li class="mt-3">Start contributing today <a
-                                        href="https://gitlab.gnome.org/GNOME/pitivi/-/issues?scope=all&utf8=%E2%9C%93&state=opened&label_name[]=4.%20Newcomers"
-                                        style="text-decoration: none; font-weight: bold;" target="_blank">here!</a>
-                                </li>
-                            </ul>
-                            <br>
-                            <br>
-                            <br>
-                            <p>
-                                I started contributing to pitivi in 2019. I would say I was lucky to find an open
-                                feature request, Interactive Intro for Pitivi guiding through parts of the Editor and
-                                features. Implemented from scratch but developing things,
-                                explored other features/code also while working on this issue, of course with the help
-                                of mentors, wherever I got stuck. The only thing I regret, not paying much attention to
-                                the Typos. Please use Extensions so that you don't make any typos and
-                                to be concise, it will save time for mentors reviewing your code and your time fixing
-                                it. Though, I do mess up sometimes. :(
-                            </p>
-                            <br>
-                            <br>
-                        </p>
-                        ~For beginners naming stuff is sometimes more time taking than the actual coding part xD.
-                        <p>
-                            <br>
-                            <br>
-                            <b>Fun fact: </b> I was looking for a Multimedia based organization so I initially picked
-                            up Musescore, successfully build the project from the source, but I had to install Visual
-                            Studio :( then my pc had 2 GB Ram. It was difficult for me to keep up with it. So not all
-                            but some
-                            projects may require you to have decent PC specifications, so If you can then it's the right
-                            time for you to invest and buy a new machine ;)
-                            <br> <br>
-                            I fixed a typo and made a pull request :). <br>
-                            Here you go: <a href="https://github.com/UnHired-Coder/MuseScore/pull/1 "
-                                style="text-decoration: none; font-weight: bold;" target="_blank"><b>Click!</b></a>
-                        </p>
-                    </div>
-                </div>
-                <br><br>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="font-weight-bold">My GSoC Project ~Pitivi: Cut Mode</h2>
-                        <br>
-                        <p>
-                            In simple words, we have a new Timeline with minimal UI which will represent the whole
-                            timeline view,
-                            you can easily track everything without needing to zoom in and zoom out. <br>
-                            This will essentially bring in a non-zoomable Timeline which will serve to ease the task of
-                            trimming,
-                            cutting, rearranging clips on the timeline in sync with the other
-                            timeline.
-                            <br>
-                            Project <a href="https://summerofcode.withgoogle.com/projects/#4814961164943360"
-                                style="text-decoration: none; font-weight: bold;" target="_blank">Link</a>
-                            <br>
-                            <br>
-                            For a more detailed overview of my proposed project and work up till now, head over <a
-                                href="./project.html">here</a>.
-                        </p>
-                        <br>
-                    </div>
-                </div>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-
-            </section>
-
-        </article>
-    </main>
+  <nav class="top-navbar navbar fixed-top navbar-expand navbar-light bg-white">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <a href="./index.html" class="navbar-brand font-weight-bold">UnHired-Coder</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="./index.html">Blogs</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Post Header with Author Info -->
+  <header class="post-header">
+    <img class="rounded-circle" src="assets/images/avatar_self.jpg" alt="Pratyush Tiwari" />
+    <div class="author-info">
+      Pratyush Tiwari | June 2021 &#8226; 6 min read
+    </div>
+    <h1>My journey to GSoC @Pitivi | Facts.</h1>
+  </header>
+  
+  <!-- Post Content -->
+  <main class="post-content">
+    <div class="text-center">
+      <img src="assets/images/gsoc_pitivi.png" alt="GSoC @Pitivi" />
+    </div>
+    <p>
+      Finally, I am writing a blog. It's the first time I am writing it so please bear with me if I go a little off-trend.
+    </p>
+    
+    <section>
+      <h2>What is GSoC?</h2>
+      <p>
+        I assume you probably are aware of Google Summer of Code (GSoC). In simple terms, it's an opportunity for you to gain real-world project experience where even a bit of contribution will impact millions of users. You feel proud of it :). You get to connect with an awesome community of developers, always a space to learn from other's experiences.
+      </p>
+      <p>
+        And finally, Google helps to connect and bring together student developers who would like to work with the respective organization. You get a decent stipend as well from Google and other perks.
+      </p>
+    </section>
+    
+    <section>
+      <h2>How to start?</h2>
+      <div class="text-center">
+        <img src="assets/images/how_to_start.jpg" alt="How to Start"  style="width:70%;" />
+      </div>
+      <p>
+        Just start ASAP! Pick an organization (depending on your interest; if you don't have any, look for some technology you use or have seen people using). It's a personal suggestion, as I feel you develop interest if you know even a bit about the idea or goal behind an organization.
+      </p>
+      <p>
+        After you have decided, your first hurdle is to get the development environment up and running—a.k.a, build the project from the source. You can visit the contribution documentation of the organization for help.
+      </p>
+      <p>
+        Not all projects are ~hard, nor are they all ~easy. The catch is that you can't overlook the nuances—understanding the codebase is key. Start exploring part by part, and a great way to begin is to look for issues marked with ~beginner on platforms like GitHub or GitLab. This will help showcase your contributions.
+      </p>
+      <p>
+        ~The good thing about working on a huge codebase is that you find most of the code/syntax within it. The rest you can ~Google and refer to documentation.
+      </p>
+      <div class="text-center">
+        <img src="assets/images/easy_bro.jpg" alt="Easy Code" style="width:70%;"  />
+      </div>
+      <p>
+        Just try to learn at every step. With honest efforts, you'll soon be very comfortable with the codebase—and voila!
+      </p>
+    </section>
+    
+    <section>
+      <h2>My journey?</h2>
+      <div class="text-center">
+        <img src="assets/images/my_journey.gif" alt="My Journey" style="width:70%;" />
+      </div>
+      <p>
+        I got selected as a Student Developer for GSoC'21 with <a href="https://www.pitivi.org/" target="_blank">Pitivi</a>, a beautiful and powerful movie editor continuously evolving with new features. Pitivi uses <a href="https://gstreamer.freedesktop.org/documentation/tutorials/index.html" target="_blank">GStreamer</a>, a project under the <a href="https://www.gnome.org/" target="_blank">GNOME</a> Community.
+      </p>
+      <ul>
+        <li class="mt-3">Pitivi Repo: <a href="https://gitlab.gnome.org/GNOME/pitivi" target="_blank">GitLab</a></li>
+        <li class="mt-3">My Profile: <a href="https://gitlab.gnome.org/UnHired-Coder" target="_blank">UnHired-Coder</a></li>
+        <li class="mt-3">Start contributing today: <a href="https://gitlab.gnome.org/GNOME/pitivi/-/issues?scope=all&utf8=%E2%9C%93&state=opened&label_name[]=4.%20Newcomers" target="_blank">here!</a></li>
+      </ul>
+      <p>
+        I started contributing to Pitivi in 2019. I was lucky to find an open feature request—Interactive Intro for Pitivi—which guided users through the editor and its features. I implemented it from scratch, and while working on this issue, I explored other parts of the codebase with help from mentors. My only regret was not paying enough attention to typos—remember, clarity saves everyone time.
+      </p>
+      <p>
+        ~For beginners, naming things is sometimes more time-consuming than coding itself xD.
+      </p>
+      <p>
+        <strong>Fun fact:</strong> I initially picked up MuseScore, successfully built it from source, but had to install Visual Studio due to my limited 2GB RAM. While not every project requires a high-end PC, some do—if you can, consider investing in a new machine. I even fixed a typo and made a pull request—<a href="https://github.com/UnHired-Coder/MuseScore/pull/1" target="_blank"><strong>Click here!</strong></a>
+      </p>
+    </section>
+    
+    <section>
+      <h2>My GSoC Project ~Pitivi: Cut Mode</h2>
+      <p>
+        In simple words, we’re introducing a new timeline with a minimal UI that represents the entire timeline view. This design lets you easily track everything without the need to zoom in or out, easing the task of trimming, cutting, and rearranging clips in sync.
+      </p>
+      <p>
+        Project <a href="https://summerofcode.withgoogle.com/projects/#4814961164943360" target="_blank">Link</a>
+      </p>
+      <p>
+        For a more detailed overview of my proposed project and work so far, check out the <a href="./project.html">project page</a>.
+      </p>
+    </section>
+  </main>
+  
+  <footer class="post-footer">
+    <p>&copy; 2021 UnHired-Coder. All rights reserved.</p>
+  </footer>
 </body>
-
 </html>

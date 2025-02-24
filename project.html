@@ -1,355 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UnHired-Coder</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="icon" type="png" href="/assets/images/avatar2.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UnHired-Coder - GSoC Final Report @Pitivi~Cut Mode</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+  <link rel="icon" type="png" href="/assets/images/avatar2.png">
+  <style>
+    :root {
+      --primary: #007bff;
+      --secondary: #6c757d;
+      --bg-color: #f4f7f9;
+      --text-color: #333;
+    }
+    body {
+      background: var(--bg-color);
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    /* Navbar */
+    .top-navbar {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: var(--text-color) !important;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      color: var(--primary) !important;
+    }
+    /* Post Header */
+    .post-header {
+      margin-top: 150px;
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .post-header .author {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .post-header .author img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    .post-header .author-info {
+      text-align: left;
+    }
+    .post-header .author-info h6 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .post-header .author-info small {
+      color: var(--secondary);
+      font-size: 0.9rem;
+    }
+    .post-header h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    /* Post Content */
+    .post-content {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+    }
+    .post-content h2 {
+      font-size: 1.75rem;
+      margin-top: 40px;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+      font-weight: 600;
+    }
+    .post-content h5 {
+      font-size: 1.25rem;
+      margin-top: 30px;
+      font-weight: 600;
+    }
+    .post-content p {
+      font-size: 1rem;
+      margin: 20px 0;
+      line-height: 1.8;
+    }
+    /* Updated Image Style: Scale to fit width without cropping */
+    .post-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .post-content iframe {
+      width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    /* Highlighted Sections */
+    .highlight-box {
+      border: 2px dotted #ccc;
+      padding: 15px;
+      margin: 40px 0;
+      border-radius: 8px;
+    }
+    /* Code Snippets */
+    pre {
+      background: #f8f9fa;
+      border-left: 4px solid var(--primary);
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 4px;
+    }
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.95rem;
+      color: #d63384;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .post-header h1 {
+        font-size: 2rem;
+      }
+      .post-content {
+        margin: 20px;
+        padding: 20px;
+      }
+      .post-header .author {
+        flex-direction: column;
+      }
+      .post-header .author img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <nav class="top-navbar navbar fixed-top navbar-expand navbar-light bg-white">
-        <div class="container mx-3 my-4">
-            <a style=" float: left; text-decoration: none; color: black;" href="./index.html">
-                <div class="words word-1">
-                    <span>U</span>
-                    <span>n</span>
-                    <span>H</span>
-                    <span>i</span>
-                    <span>r</span>
-                    <span>e</span>
-                    <span>d</span>
-                    <span>-</span>
-                    <span>C</span>
-                    <span>o</span>
-                    <span>d</span>
-                    <span>e</span>
-                    <span>r</span>
-                </div>
-            </a>
-            <div class="navbar-btns navbar-nav ">
-                <a class="nav-link " href="./index.html" title="sign in">Blogs</a>
-                <div class="navbar-text"> </div>
-                <a class="nav-link " href="./about.html" title="sign up">About</a>
-                <div class="navbar-text "> </div>
-            </div>
-        </div>
-    </nav>
-
-    <div style="height: 150px"></div>
-    <main class="container">
-        <div class="row justify-content-center">
-            <div class="float-left text-center">
-                <img class="rounded-circle" height="70" src="assets/images/avatar_self.jpg" alt="avatar">
-            </div>
-            <div class="col-7 ml-1">
-                <div class="row">
-                    <h6>Pratyush Tiwari</h6>
-                    <!-- <button class="follow-btn follow-btn--small btn btn-outline-success btn-sm ml-3" type="button">Follow</button> -->
-                </div>
-                <div class="row">
-                    <small class="text-secondary">Avid programmer, learning the art of problem-solving. Android
-                        Developer. Opensource Contributer. To build services which would ease the life, not make it less
-                        mobile.
-                    </small>
-                </div>
-                <div class="row">
-                    <small class="text-secondary">Aug , 2021 &#8226; 10 min read</small>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <article>
-            <div class="row">
-                <div class="col-lg-8 mx-auto" ;>
-                    <h1 class="font-weight-bold mt-4">Google Summer of Code Final Report @Pitivi~Cut Mode.</h1>
-                    <div class="row justify-content-center">
-                        <img class="img-fluid my-4" style="max-height: 200px;" src="assets/images/gsoc_pitivi.png">
-                        <p>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <section class="mt-5">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <p>Let's quickly go over the project :)
-                        </p>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="font-weight-bold">Pitivi ~Cut Mode</h2>
-                        <br>
-                        <p>
-                            The Idea for this project is to have two timelines to ease certain types
-                            of tasks and increase productivity. This will essentially bring in a
-                            non-zoomable Timeline which will serve to ease the task of trimming,
-                            cutting, rearranging clips on the timeline in sync with the other
-                            timeline.
-                        </p>
-                        <br>
-                        <img class="col-lg-12" src="./assets/images/priview_cut_mode_simple.png" alt="#">
-                    </div>
-                </div>
-                <br><br>
-                <br><br>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto" style="border-width: 2px; border-style: dotted; padding: 10px;">
-                        <p>You can also watch the <b>GUADEC Intern Lightening talks 2021</b>, I talk about my project
-                            "Cut-Mode" with the other contributors and communty members. </p>
-                        <br>
-                        <iframe width="100%" height="300px" src="https://www.youtube.com/embed/DjmL5YbcPEQ?start=8284"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <br><br>
-                <br><br>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2 class="font-weight-bold">Benefits?</h2>
-                        <br>
-
-                        <p>
-                            Mostly, when we have a movie of a longer duration, we want to use the Zoom feature to see
-                            the whole timeline and scroll in-out to perform edits and rearrange clips. It consumes a lot
-                            of time which may be used productively somewhere, so to reduce user actions we have a zoom
-                            fitted timeline with small height layers so that all the layers and tracks are always
-                            visible. Now you only think about Zoom when you want to perform some precise edits, others
-                            on the Zoom fitted timeline ;).
-                        </p>
-                        <br> <br>
-                        <span>From now, we will call the ZoomFitted timeline a <b>Mini Timeline</b> and the other simply
-                            a <b>Timeline</b>.</span> <br>
-                        <!-- <span>In case you are already trying it out, hit <b>`Alt+C`</b> to make Mini Timeline visible.
-                        </span> -->
-                        <!-- <br>  -->
-                        <br><br>
-                        <h5>Longer duration timeline?</h5>
-                        <br>
-                        <p>You can easily keep track having the scaled, reduced size elements on the Mini Timeline.
-                        </p>
-                        <br><br>
-                        <img class="col-lg-12" src="./assets/images/long_duration.gif" alt="#">
-                        <br> <br>
-                        <p>Further, it scales as you add elements at the end (Timeline Duration Increases) vice-versa,
-                            the whole timeline fits in the Mini Timeline view.
-                        </p>
-                        <br><br>
-                        <img class="col-lg-12" src="./assets/images/scale_as_timeline_grows.gif" alt="#">
-                        <br> <br><br> <br>
-                        <h5>Many layers to work with?</h5>
-                        <br>
-                        <p>
-                            Pitivi allows you to unlock all the views to a separate window, so If you have more layers,
-                            you may undock the views to separate screens and expand the Mini Timeline to make all the
-                            layers visible at the same time.</p>
-                        <br>
-                        <img class="col-lg-12" src="./assets/images/many_layers_to_work.png" alt="#">
-                        <br> <br> <br> <br>
-
-                        <h5>Let's dive deep!</h5>
-                        <br>
-                        <p>
-                            Consider a case where we want to edit a portion of a timeline, for
-                            precise edits we have to zoom in at the required position, do the edits,
-                            zoom out, move to the next position, and so on for subsequent edits.
-                            This eats up a lot of precious time. The new Mini timeline allows the
-                            user to see the zoomed view as well as keep track of position in the
-                            Mini timeline at the same time. Now you can move anywhere in the
-                            timeline with a single click, preserving the zoomed view in <b>Playhead Locked</b>
-                            mode, can be enabled via keys `<b>Alt+P</b>`. <br> It scrolls the Timeline horizontally
-                            such that Playhead is centered concerning the Timeline.</p>
-                        <br>
-                        <img class="col-lg-12" src="./assets/images/move_playhead.gif" alt="#">
-                        <br> <br> <br> <br>
-                        <p>
-
-                            Mini Timeline also allows you to rearrange clips so, where you have a short clip of
-                            about a few seconds and you wish to relocate it, say from start to the end of the timeline,
-                            you would select a clip, zoom out the timeline and drag it to end, zoom in to come to the
-                            same state. Another way is to start dragging and use the over scroll mechanism and wait for
-                            your desired position. Neither of them is ideal. The new Mini timeline allows us to quickly
-                            locate clips and drag them at any position since the entire duration is always in view.</p>
-                        <br>
-                        <img class="col-lg-12" src="./assets/images/move_around_clips_easily.gif" alt="#">
-                        <br><br><br>
-
-                        <h5>What else?</h5>
-                        <br>
-                        <p>
-                            You can do all the stuff on Mini Timeline that you do on the conventional Timeline. For
-                            example, you can drag clips directly on the Mini Timeline, select overlapped clips to apply
-                            transitions, drag effects directly over the mini timeline elements, etc. </p>
-                        <br> <br>
-                        <p>Drag on the Mini Timeline.
-                        </p>
-                        <br>
-                        <img class="col-lg-12" src="./assets/images/drag_on_the_mini_timeline.gif" alt="#">
-                        <br> <br>
-                        <p> Apply transitions & Drop effects.
-                        </p>
-                        <br>
-                        <img class="col-lg-12" src="./assets/images/do_stuff_on_mini_timeline.gif" alt="#">
-                        <br><br><br>
-                        <p>
-                            Finally, when you are done, you can easily hide it by hitting keys <b>`Alt+C`</b></p>.
-                        </p>
-                        <br>
-                        <div style="text-align: center;">
-                            <img class="img-fluid" src="./assets/images/easy_bro.jpg" style="max-height: 200px;"
-                                alt="#">
-                        </div>
-                        <br>
-                        <img class="col-lg-12" src="./assets/images/done_close_timeline.gif" alt="#">
-                        <br><br><br> <br>
-                        <br><br><br> <br>
-                        <h2><b> Implementation</b></h2>
-                        <br><br>
-
-                        <p>
-                            I present you a high-level overview of how everything is structured.
-                        </p>
-                        <br>
-                        <br>
-                        <p>
-                            The <b>Layer</b> class was refactored and subclassed into two implementations, namely,
-                            <b>Full Layer</b> and <b>Mini Layer</b>.
-                        </p>
-                        <br>
-                        <img class="col-lg-12" src="./assets/images/layer_subclass.png" alt="#">
-                        <br>
-                        <br>
-                        <br>
-                        <p>
-                            Similarly, the <b>Clip</b> class was refactored and subclassed into <b>Full Clip</b> and
-                            <b>Mini Clip</b>.
-                        </p>
-                        <br>
-                        <img class="col-lg-12" src="./assets/images/clip_subclass.png" alt="#">
-                        <br>
-                        <p>
-                            Similarly, for other related classes as well.
-                        </p>
-                        <br>
-                        <br>
-                        <br>
-                        <p>
-                            So, now, the <b>Timeline</b> architecture changes to
-                        </p>
-                        <br>
-                        <div>
-                            <img class="" style="width: 110%" src="./assets/images/highlevel_overview_cutmode.png"
-                                alt="#">
-                        </div>
-                        <br>
-                        <br>
-                        <p>
-                        </p>
-                        <br>
-                        <h5><b> Code Snippets</b></h5>
-                        <br>
-                        <p>
-                            <b>1.</b> As the Mini Timeline does not change with zoom-level (unlike Timeline) and always
-                            remains
-                            <b>zoom-fitted</b>, the Mini versions of classes do not subclass <a
-                                href="https://gitlab.gnome.org/GNOME/pitivi/-/blob/144907e868793dd5d73bf8257f678ead82ec4aba/pitivi/utils/timeline.py#L363"
-                                target="_blank">
-                                <b>Zoomable</b></a>
-                            , instead,
-                            they use the
-                            best ratio to transform positions whenever changed. <br>
-                            Below is the method for the calculation of the best ratio to fit the Timeline into the view.
-                        </p>
-                        <br>
-                        <pre style="padding: 10px; align-self: left;">
-                            <code>
-def <a href="https://gitlab.gnome.org/GNOME/pitivi/-/blob/144907e868793dd5d73bf8257f678ead82ec4aba/pitivi/timeline/timeline.py#L1370" target="_blank">calc_best_zoom_ratio</a>(self, mini=True):
+  <nav class="top-navbar navbar fixed-top navbar-expand navbar-light bg-white">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <a href="./index.html" class="navbar-brand">UnHired-Coder</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="./index.html">Blogs</a>
+        <a class="nav-link" href="./about.html">About</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Post Header -->
+  <header class="post-header">
+    <div class="author">
+      <img src="assets/images/avatar_self.jpg" alt="Pratyush Tiwari">
+      <div class="author-info">
+        <h6>Pratyush Tiwari</h6>
+        <small>Aug, 2021 &#8226; 10 min read</small>
+      </div>
+    </div>
+    <h1>Google Summer of Code Final Report @Pitivi~Cut Mode.</h1>
+  </header>
+  
+  <!-- Post Content -->
+  <main class="post-content">
+    <div class="text-center">
+      <img src="assets/images/gsoc_pitivi.png" alt="GSoC Pitivi">
+    </div>
+    <p>Let's quickly go over the project :)</p>
+    
+    <section>
+      <h2>Pitivi ~Cut Mode</h2>
+      <p>
+        The idea for this project is to have two timelines to ease certain tasks and increase productivity. This introduces a non-zoomable Timeline which simplifies trimming, cutting, and rearranging clips in sync.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/priview_cut_mode_simple.png" alt="Preview Cut Mode">
+      </div>
+    </section>
+    
+    <section class="highlight-box">
+      <p>
+        You can also watch the <strong>GUADEC Intern Lightening Talks 2021</strong> where I discuss the "Cut-Mode" project with fellow contributors and community members.
+      </p>
+      <iframe height="300" src="https://www.youtube.com/embed/DjmL5YbcPEQ?start=8284" title="GUADEC Intern Lightening Talks 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    
+    <section>
+      <h2>Benefits?</h2>
+      <p>
+        For longer movies, using a zoom feature to see the entire timeline and scroll for editing consumes a lot of time. The solution is a zoom-fitted timeline with slim layers ensuring all tracks remain visible. We'll call the zoom-fitted timeline the <strong>Mini Timeline</strong> and the other simply the <strong>Timeline</strong>.
+      </p>
+      <h5>Longer Duration Timeline?</h5>
+      <p>
+        With scaled, reduced-size elements on the Mini Timeline, you can easily track changes as the timeline grows.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/long_duration.gif" alt="Long Duration Timeline">
+      </div>
+      <p>
+        As elements are added or removed, the Mini Timeline scales accordingly, keeping the entire timeline in view.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/scale_as_timeline_grows.gif" alt="Timeline Scales">
+      </div>
+      <h5>Many Layers to Work With?</h5>
+      <p>
+        Pitivi allows you to undock views to separate screens, expanding the Mini Timeline so that all layers are visible simultaneously.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/many_layers_to_work.png" alt="Multiple Layers">
+      </div>
+      <h5>Let's Dive Deep!</h5>
+      <p>
+        Consider the scenario where precise edits require zooming in at a specific position, making changes, then zooming out to continue. This process wastes valuable time. The new Mini Timeline lets you maintain a zoomed view while tracking your position—with <strong>Playhead Locked</strong> mode (enabled via <strong>Alt+P</strong>). The timeline scrolls horizontally to center the playhead.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/move_playhead.gif" alt="Move Playhead">
+      </div>
+      <p>
+        The Mini Timeline also makes rearranging clips easier. Instead of multiple steps to relocate a clip, simply drag it on the Mini Timeline, which always displays the entire duration.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/move_around_clips_easily.gif" alt="Rearrange Clips">
+      </div>
+      <h5>What Else?</h5>
+      <p>
+        You can perform all actions on the Mini Timeline that you would on the conventional Timeline, such as dragging clips, applying transitions, and dropping effects.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/drag_on_the_mini_timeline.gif" alt="Drag on Mini Timeline">
+      </div>
+      <p>
+        Apply transitions and drop effects seamlessly.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/do_stuff_on_mini_timeline.gif" alt="Apply Transitions">
+      </div>
+      <p>
+        Finally, when you're done, hide the Mini Timeline by pressing <strong>Alt+C</strong>.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/easy_bro.jpg" alt="Easy Bro" style="width:30%;">
+      </div>
+      <div class="text-center">
+        <img src="./assets/images/done_close_timeline.gif" alt="Close Timeline">
+      </div>
+    </section>
+    
+    <section>
+      <h2><strong>Implementation</strong></h2>
+      <p>
+        Here's a high-level overview of the project's structure. The <strong>Layer</strong> class has been refactored into two implementations—<strong>Full Layer</strong> and <strong>Mini Layer</strong>—while the <strong>Clip</strong> class has been similarly subclassed.
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/layer_subclass.png" alt="Layer Subclass">
+      </div>
+      <p>
+        Related classes have also been updated. The Timeline architecture now reflects these changes:
+      </p>
+      <div class="text-center">
+        <img src="./assets/images/highlevel_overview_cutmode.png" alt="Timeline Overview" style="width:100%;">
+      </div>
+      <h5><strong>Code Snippets</strong></h5>
+      <p>
+        <strong>1.</strong> The Mini Timeline remains zoom-fitted regardless of the zoom level. The Mini versions of classes do not subclass <a href="https://gitlab.gnome.org/GNOME/pitivi/-/blob/144907e868793dd5d73bf8257f678ead82ec4aba/pitivi/utils/timeline.py#L363" target="_blank">Zoomable</a>; instead, they compute the optimal ratio to fit the timeline into view. Below is the method for calculating this ratio:
+      </p>
+      <pre><code>
+def calc_best_zoom_ratio(self, mini=True):
     """Returns the zoom ratio so that the entire timeline is in (mini)view."""
     duration = 0 if not self.ges_timeline else self.ges_timeline.get_duration()
     if not duration or (mini and not self.mini_layout_container.get_visible()):
-        # Maximum available width, the parent is TimelineContainer
         return self.get_parent().get_allocated_width()
-
-    # Add Gst.SECOND - 1 to the timeline duration to make sure the
-    # last second of the timeline will be in view.
     timeline_duration = duration + Gst.SECOND - 1
     timeline_duration_s = int(timeline_duration / Gst.SECOND)
-    self.debug("Adjusting zoom for a timeline duration of %s secs",
-            timeline_duration_s)
-
+    self.debug("Adjusting zoom for a timeline duration of %s secs", timeline_duration_s)
     layout = self.mini_layout if mini else self.layout
     zoom_ratio = layout.get_allocation().width / timeline_duration_s
     return zoom_ratio
-                            </code>
-                        </pre>
-                        <br>
-                        <p>
-                            <b>2.</b> The Clips/Elements on the Mini Timeline are just simple representations without
-                            the thumbnails, we use color-filled rectangles (the color is decided based on the type of
-                            clip) to represent them.
-                        </p>
-                        <br>
-                        <pre style="padding: 10px; align-self: left;">
-                            <code>
-class <a href="https://gitlab.gnome.org/GNOME/pitivi/-/blob/144907e868793dd5d73bf8257f678ead82ec4aba/pitivi/timeline/previewers.py#L1451" target="_blank">MiniPreview</a> (Gtk.Layout):
-"""Mini Clip previewer to draw color filled mini clips."""
+      </code></pre>
+      <p>
+        <strong>2.</strong> The Mini Timeline's clip representations are simplified – color-filled rectangles (with colors based on clip type) represent clips.
+      </p>
+      <pre><code>
+class MiniPreview(Gtk.Layout):
+    """Mini Clip previewer to draw color-filled mini clips."""
+    def __init__(self, color):
+        Gtk.Layout.__init__(self)
+        self.get_style_context().add_class("MiniPreviewer")
+        self.color = color
+        self.props.height_request = MINI_LAYER_HEIGHT
 
-def __init__(self, color):
-    Gtk.Layout.__init__(self)
-    self.get_style_context().add_class("MiniPreviewer")
-    self.color = color
-    self.props.height_request = MINI_LAYER_HEIGHT
-
-def do_draw(self, context):
-    rect = Gdk.cairo_get_clip_rectangle(context)[1]
-    context.set_source_rgb(*self.color)
-    context.rectangle(0, 0, rect.width, rect.height)
-    context.fill()
-                            </code>
-                        </pre>
-                        <br>
-                        <br>
-                        <p>
-                            All the <b>Code and the changes</b> are available on <a href="https://gitlab.gnome.org/GNOME/pitivi/-/merge_requests/397" target="_blank" style="color: red;">MR !397</a> 
-                        </p>
-                        <br><br>
-                        <p>
-                            Implementing the Mini Timeline became easy with the feedback from mentors and the
-                            clean and extensible codebase.
-                        </p>
-                        <br>
-                        <p>
-                            That's it for now. I will be adding more things here as they come.
-                        </p>
-                        <br><br>
-                        <p>
-                            Have a great day!
-                            <br><br> Will update you soon. <br> Thanks!
-                        </p>
-                    </div>
-                </div>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-            </section>
-
-        </article>
-    </main>
+    def do_draw(self, context):
+        rect = Gdk.cairo_get_clip_rectangle(context)[1]
+        context.set_source_rgb(*self.color)
+        context.rectangle(0, 0, rect.width, rect.height)
+        context.fill()
+      </code></pre>
+      <p>
+        All code changes are available on <a href="https://gitlab.gnome.org/GNOME/pitivi/-/merge_requests/397" target="_blank" style="color: red;"><strong>MR !397</strong></a>.
+      </p>
+      <p>
+        Implementing the Mini Timeline was made easier thanks to valuable mentor feedback and a clean, extensible codebase.
+      </p>
+      <p>
+        That's it for now. I will update this post with more details as they come.
+      </p>
+      <p>
+        Have a great day! Will update you soon. Thanks!
+      </p>
+    </section>
+  </main>
 </body>
-
 </html>
