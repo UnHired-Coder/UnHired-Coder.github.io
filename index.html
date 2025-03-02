@@ -42,7 +42,7 @@
 
     .modern-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px rgba(118, 118, 118, 0.15);
     }
 
     .modern-card .card-body {
@@ -62,7 +62,7 @@
       border-radius: 50%;
       object-fit: cover;
       margin-right: 15px;
-      border: 2px solid #007bff;
+      border: 2px solid #000000;
     }
 
     .author-details h5 {
@@ -93,19 +93,27 @@
 
     /* Read More Button */
     .btn-read {
-      display: inline-block;
-      padding: 8px 16px;
-      font-size: 0.9rem;
-      border: 2px solid #007bff;
-      border-radius: 30px;
-      color: #007bff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      border: 1px solid #6e6e6e;
+      border-radius: 8px;
+      color: #6e6e6e;
+      background: #fff;
       text-decoration: none;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     .btn-read:hover {
-      background: #007bff;
+      background: #000000;
       color: #fff;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     /* Thumbnail Image Styling */
